@@ -17,7 +17,7 @@ cd IaC
 . scripts/install.sh
 
 cd Terraform/AWS/dynamodb-local/eu-central-1/hacker_game && \
-terragrunt apply --terragrunt-non-interactive
+terragrunt apply -auto-approve
 
 sudo aws ecr get-login-password --region eu-central-1 | \
   docker login --username AWS --password-stdin \

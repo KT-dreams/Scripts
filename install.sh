@@ -2,10 +2,9 @@
 
 VERSION=$1
 
-if [ -z "$VERSION" ] 
+if [ -z "$VERSION" ]
 then
-    echo 'Usage: ./install.sh <VERSION>'
-    exit 1
+    VERSION=`cat default_version`
 fi
 
 git clone git@github.com:KT-dreams/IaC.git

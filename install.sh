@@ -13,7 +13,7 @@ git clone git@github.com:KT-dreams/Backend.git
 mkdir data
 sudo chmod 664 data
 sudo docker run -p 8000:8000 -v `pwd`/data:/data/ -d \
-  amazon/dynamodb-local -jar DynamoDBLocal.jar \
+  > dynamodb_container_id amazon/dynamodb-local -jar DynamoDBLocal.jar \
   -sharedDb -dbPath /data
 
 mv Backend/.example.env Backend/.env

@@ -11,7 +11,7 @@ git clone git@github.com:KT-dreams/IaC.git
 git clone git@github.com:KT-dreams/Backend.git
 
 mkdir data
-sudo chmod 664 data
+sudo chmod 764 data
 sudo docker run -p 8000:8000 -v `pwd`/data:/data/ -d \
   > dynamodb_container_id amazon/dynamodb-local -jar DynamoDBLocal.jar \
   -sharedDb -dbPath /data
